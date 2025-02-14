@@ -15,6 +15,9 @@
         const innerHTML = p.innerHTML;
         if (innerHTML.startsWith(ANSWER)) {
           p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}</span>`;
+          p.addEventListener("click", () => {
+            p.style.filter = "none";
+          });
         }
       }
       document.addEventListener("DOMContentLoaded", function() {
@@ -32,7 +35,7 @@
     </script>
     <style>
       .answer {
-        filter: blur(10px);
+        filter: blur(5px);
       }
     </style>
   </head>
