@@ -14,10 +14,10 @@
         const ANSWER = 'Ответ: ';
         const innerHTML = p.innerHTML;
         if (innerHTML.startsWith(ANSWER)) {
-          p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}</span>`;
+          p.innerHTML = `${ANSWER}<span style='filter: blur(5px);'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
             p.firstChild.style = "filter: blur(0px);";
-            console.log('click!');
+            console.log(p.firstChild.innerHTML)
           };
         }
       }
