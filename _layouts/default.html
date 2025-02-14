@@ -14,7 +14,7 @@
         const ANSWER = 'Ответ: ';
         const innerHTML = p.innerHTML;
         if (innerHTML.startsWith(ANSWER)) {
-          p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}<\\span>`;
+          p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}</span>`;
         }
       }
       document.addEventListener("DOMContentLoaded", function() {
