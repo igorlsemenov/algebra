@@ -14,11 +14,11 @@
         const ANSWER = 'Ответ: ';
         const innerHTML = p.innerHTML;
         if (innerHTML.startsWith(ANSWER)) {
-          p.innerHTML = `${ANSWER}<span style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
+          p.innerHTML = `${ANSWER}<span class='answer' style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
-            const textShadow = p.firstChild.getAttribute('style').includes('none') ? '0 0 8px #000' : 'none';
-            p.firstChild.setAttribute('style', 'text-shadow: ' + textShadow + ';');
-            console.log(p.firstChild.getAttribute('style'));
+            const textShadow = p.firstChild.style.includes('none') ? '0 0 8px #000' : 'none';
+            p.firstChild.style = 'text-shadow: ' + textShadow + ';';
+            console.log(p.firstChild.style);
           };
         }
       }
@@ -37,7 +37,7 @@
     </script>
     <style>
       .answer {
-        filter: blur(5px);
+        color: transparent;
       }
     </style>
   </head>
