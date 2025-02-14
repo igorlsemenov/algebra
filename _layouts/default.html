@@ -16,8 +16,8 @@
         if (innerHTML.startsWith(ANSWER)) {
           p.innerHTML = `${ANSWER}<span style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
-            p.firstChild.setAttribute('style', 'text-shadow: ' +
-              p.firstChild.getAttribute('style').includes('none') : '0 0 8px #000;' ? 'none;');
+            const textShadow = p.firstChild.getAttribute('style').includes('none') : '0 0 8px #000' ? 'none';
+            p.firstChild.setAttribute('style', 'text-shadow: ' + textShadow + ';');
             console.log(p.firstChild.getAttribute('style'));
           };
         }
