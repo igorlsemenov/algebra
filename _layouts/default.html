@@ -17,9 +17,7 @@
           p.innerHTML = `${ANSWER}<span class='answer' style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
             const spanStyle = p.lastChild.style;
-            console.log(p.lastChild);
-            console.log(spanStyle.textShadow);
-            spanStyle.textShadow = spanStyle.textShadow.includes('unset') ? '0 0 8px #000' : 'unset';
+            spanStyle.textShadow = spanStyle.textShadow.includes('none') ? '0 0 8px #000' : 'none';
           };
         }
       }
