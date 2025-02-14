@@ -12,10 +12,10 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.getElementsByTagName('p').forEach((p) => {
-          const ANSWER = 'Ответ: '
+          const ANSWER = 'Ответ: ';
           const innerText = p.innerText;
           if (innerText.startsWith(ANSWER)) {
-            p.innerText = ANSWER + '<span class="answer">' + innerText.substring(Answer.length) + '<span>'
+            p.innerText = ANSWER + '<span class="answer">' + innerText.substring(ANSWER.length) + '<span>';
           }
         });
         renderMathInElement(document.body, {
