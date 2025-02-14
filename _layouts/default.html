@@ -15,9 +15,9 @@
         const innerHTML = p.innerHTML;
         if (innerHTML.startsWith(ANSWER)) {
           p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}</span>`;
-          p.addEventListener("click", function() {
+          p.onclick = function() {
             p.firstChild.style.filter = "blur(0px)";
-          });
+          };
         }
       }
       document.addEventListener("DOMContentLoaded", function() {
