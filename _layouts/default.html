@@ -16,9 +16,9 @@
         if (innerHTML.startsWith(ANSWER)) {
           p.innerHTML = `${ANSWER}<span class='answer' style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
-            const textShadow = p.firstChild.style.cssText.includes('unset') ? '0 0 8px #000' : 'unset';
-            p.firstChild.style.cssText = 'text-shadow: ' + textShadow + ';';
-            console.log(p.firstChild.style.cssText);
+            console.log(p.firstChild);
+            console.log(p.firstChild.style.textShadow);
+            p.firstChild.style.textShadow = p.firstChild.style.textShadow.includes('unset') ? '0 0 8px #000' : 'unset';
           };
         }
       }
