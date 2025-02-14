@@ -12,9 +12,9 @@
     <script>
       function formatAnswer(p, index, list) {
         const ANSWER = 'Ответ: ';
-        const innerText = p.innerText;
-        if (innerText.startsWith(ANSWER)) {
-          p.innerText = ANSWER + '<span class="answer">' + innerText.substring(ANSWER.length) + '<\\span>';
+        const innerHTML = p.innerHTML;
+        if (innerHTML.startsWith(ANSWER)) {
+          p.innerHTML = `${ANSWER}<span class='answer'>${innerHTML.substring(ANSWER.length)}<\\span>`;
         }
       }
       document.addEventListener("DOMContentLoaded", function() {
