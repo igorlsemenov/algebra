@@ -17,7 +17,9 @@
           p.innerHTML = `${ANSWER}<span class='answer' style='text-shadow: 0 0 8px #000;'>${innerHTML.substring(ANSWER.length)}</span>`;
           p.onclick = function() {
             const spanStyle = p.lastChild.style;
+            console.log(spanStyle.textShadow);
             spanStyle.textShadow = '0 0 0px #000';
+            console.log(spanStyle.textShadow);
             //spanStyle.textShadow = '0 0 2px #000';
             //spanStyle.textShadow = '0 0 ' + (spanStyle.textShadow.includes('2px') ? '8' : '0') + 'px #000';
           };
